@@ -106,9 +106,10 @@ export default {
       // console.log('Submit', this.form)
       this.$store.commit('PostUserData', this.form)
       this.$router.push('/basicview')
+      localStorage.setItem('userData', JSON.stringify(this.form))
     },
     onNoSubmit () {
-      //   console.log('No Submit', this.form)
+      console.log(JSON.parse(localStorage.getItem('userData')))
     },
     onReset () { this.$refs.observer.reset() }
   }
