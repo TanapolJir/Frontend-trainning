@@ -116,6 +116,11 @@ export default {
           icon: 'mdi-chart-bubble',
           title: 'form input',
           to: '/forminput'
+        },
+        {
+          icon: 'mdi-chart-bubble',
+          title: 'Notiflix',
+          to: '/notiflix'
         }
       ],
       miniVariant: false,
