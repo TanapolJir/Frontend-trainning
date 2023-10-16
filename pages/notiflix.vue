@@ -12,8 +12,8 @@
         </v-btn>
       </v-col>
       <v-col md="4">
-        <v-btn @click="onConfirmThen">
-          confirm Then
+        <v-btn @click="onWithStack">
+          Stack
         </v-btn>
       </v-col>
     </v-row>
@@ -40,6 +40,9 @@ export default {
     },
     onWithWord () {
       this.$Notiflix.loadingWord()
+    },
+    onWithStack () {
+      this.$Notiflix.loadingStack()
     }
   }
 }

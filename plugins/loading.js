@@ -15,6 +15,22 @@ const Notiflix = {
       messageColor: 'rgba(30,199,95,9)',
       clickToClose: true
     })
+  },
+  loadingStack () {
+    let progress = 1
+    Loading.standard(`Loading ${progress}`)
+    const intervalId = setInterval(() => {
+      Loading.change(`Loading ${progress}`)
+      progress += 1
+
+      if (progress > 20) {
+        clearInterval(intervalId)
+
+        setTimeout(() => {
+          Loading.remove()
+        }, 100)
+      }
+    }, 100)
   }
 
 }
